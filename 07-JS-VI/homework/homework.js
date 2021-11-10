@@ -4,14 +4,16 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código: nombre.slice(1,nombre.length)
-  return nombre[0].toUpperCase() + nombre.slice(1)
-
+  // return nombre[0].toUpperCase() + nombre.slice(1)
+  var arr= nombre.split("")
+  arr[0] = arr[0].toUpperCase() 
+  return arr.join("") 
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`, callback es una funcion que se pasa como argumento o parametro a otra funcion
   //Tu código: callback----> funcion dentro de otra funcion 
-  cb()
+  return cb()
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -21,8 +23,9 @@ function operacionMatematica(n1, n2, cb) {
   //invocandoalacallback= funcion(n1, n2)
   // return a+b
 
-    cb(n1,n2)
-    return cb
+    // cb(n1,n2)
+    // return cb
+    return cb(n1,n2)
 
 }
 
@@ -68,24 +71,29 @@ function map(array, cb) {
  //   nuevoarray.push(resultado)
  // }
   //return nuevoarray             otra forma de resolver 
-    var nuevoArray = array.map(function(elemento){
-      return cb(elemento)
-    })
-   return nuevoArray
+  //   var nuevoArray = array.map(function(elemento){
+ //     return cb(elemento)
+ //   })
+ //  return nuevoArray
+ var arr = array.map(cb)
+ return arr
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  var filterArray = []
-  for (var i = 0; i < array.length; i++) {
-    if (array[i].charAt(0) === "a"){
-      filterArray.push(array[i])
-    }
-    
-  }
-  return filterArray
+  //var filterArray = []
+  //for (var i = 0; i < array.length; i++) {
+  //  if (array[i].charAt(0) === "a"){
+  //    filterArray.push(array[i])
+  //  }  
+ // }
+ // return filterArray
+ var arr = array.filter(function(elemento){
+   return elemento[0]==="a"
+ })
+ return arr
 }
 
 // No modificar nada debajo de esta línea
