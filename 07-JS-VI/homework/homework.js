@@ -26,7 +26,7 @@ function operacionMatematica(n1, n2, cb) {
     // cb(n1,n2)
     // return cb
     return cb(n1,n2)
-
+ 
 }
 
 function sumarArray(numeros, cb) {
@@ -36,15 +36,15 @@ function sumarArray(numeros, cb) {
   //Tu código:
   //var resultado = 0
  // for (var i = 0; i < numeros.length; i++) {
-//  // resultado = resultado + numeros[i];
+ //  // resultado = resultado + numeros[i];
  //   resultado += numeros[i];
  // }
   //cb (resultado)
-   let resultado = numeros.reduce(function(acumulador, elemento, i){
-     return acumulador + elemento
+ let resultado = numeros.reduce(function(acumulador, elemento, i){
+    return acumulador + elemento
  
-   }, 0)
-   cb(resultado)
+  }, 0) //el cero es porque el acunulador enpiesa en cero  
+  cb(resultado)
 }
 
 function forEach(array, cb) {
@@ -54,7 +54,7 @@ function forEach(array, cb) {
   //for (var i = 0; i < array.length;i++) {
   //  cb(array[i]);
   //}
-  array.forEach(function (elemento) {
+  array.forEach(function (elemento) {//forEach itera sobre un array elemento por elemento
     cb(elemento)
   }) 
 }
@@ -90,10 +90,11 @@ function filter(array) {
   //  }  
  // }
  // return filterArray
- var arr = array.filter(function(elemento){
-   return elemento[0]==="a"
- })
- return arr
+ var nuevoarr = array.filter(function(elemento){
+   if ( elemento[0] === "a")
+    return elemento
+  })
+  return nuevoarr
 }
 
 // No modificar nada debajo de esta línea
