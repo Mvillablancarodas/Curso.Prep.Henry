@@ -1,0 +1,28 @@
+h1{
+    color: rgb(129, 8, 243);
+
+}
+h2{
+    color: orange;
+    border-radius: 50%;
+}
+img{
+    width: 400px;
+    border-radius: 50%;
+}
+.imagen-grande{
+    width: 500px;
+}
+#thirdDiv{
+    height: 600px;
+    width: 500px ;
+    background-color: rgb(241, 116, 237);
+    padding: 50px;
+    border: 5px solid blue;
+    border-radius: 30px ;
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+
+}
